@@ -136,3 +136,8 @@ REST_FRAMEWORK = {
 
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+ALLOWED_HOSTS = ['*']
+
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
