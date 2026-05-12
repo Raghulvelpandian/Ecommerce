@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 
 @api_view(['GET'])
 def get_products(request):
-    products = Product.objects.all().values()
+    products = Product.objects.all()
     serializer = ProductSerializer(products,many=True)
     return Response(serializer.data)
 
